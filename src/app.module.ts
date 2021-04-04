@@ -8,7 +8,7 @@ import { ItemsService } from './items/items.service';
 import { ItemsModule } from './items/items.module';
 
 @Module({
-  imports: [ItemsModule, ConfigModule.forRoot(), MongooseModule.forRoot(process.env.MONGODB)],
+  imports: [ConfigModule.forRoot(), MongooseModule.forRoot(process.env.MONGODB), ItemsModule],
   controllers: [AppController, ItemsController],
   providers: [AppService, ItemsService],
 })
