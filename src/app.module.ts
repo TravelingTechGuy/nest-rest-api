@@ -10,6 +10,6 @@ import { ItemsModule } from './items/items.module';
 @Module({
   imports: [ConfigModule.forRoot(), MongooseModule.forRoot(process.env.MONGODB), ItemsModule],
   controllers: [AppController, ItemsController],
-  providers: [AppService, ItemsService],
+  providers: [AppService],
 })
 export class AppModule {}
