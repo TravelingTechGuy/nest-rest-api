@@ -25,10 +25,10 @@ export class ItemsController {
   @Delete(':id')
   delete(@Param('id') id): Promise<Item> {
     return this.itemsService.delete(id);
-  }
+  };
 
   @Put(':id')
   update(@Body() updateItemDto: CreateItemDto, @Param('id') id): Promise<Item> {
     return this.itemsService.update(id, updateItemDto);
-  }
-}
+  };
+};
